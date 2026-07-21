@@ -1,6 +1,7 @@
 # Notes-Maker
-A simple, fast, and responsive full-stack note-taking application built with the MERN stack.
+**Live Link:** [http://notes-maker-sand-beta.vercel.app/](http://notes-maker-sand-beta.vercel.app/)
 
+A simple, fast, and responsive full-stack note-taking application built with the MERN stack.
 ## Technology Stack
 **Frontend:**
 - React (via Vite)
