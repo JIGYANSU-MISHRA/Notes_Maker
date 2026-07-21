@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Register.css';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const Register = ({ onLoginSuccess }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -30,7 +31,7 @@ const Register = ({ onLoginSuccess }) => {
     try {
       setLoading(true);
 
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post(`${API_URL}/api/auth/register`, {
         name,
         email,
         password,

@@ -3,9 +3,9 @@ import axios from 'axios';
 import NoteCard from '../components/NoteCard';
 import './Notes.css';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const Notes = ({ user, onLogout }) => {
   const [notes, setNotes] = useState([]);
-  
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   
@@ -25,7 +25,7 @@ const Notes = ({ user, onLogout }) => {
   const fetchNotes = async () => {
     try {
       setFetchingNotes(true);
-      const response = await axios.get('http://localhost:5000/api/notes', getAuthHeader());
+      const response = await axios.get(`${API_URL}/api/notes`, getAuthHeader());
       setNotes(response.data);
     } catch (err) {
       if (err.response && err.response.status === 401) {
@@ -54,7 +54,7 @@ const Notes = ({ user, onLogout }) => {
     try {
       setLoading(true);
       const response = await axios.post(
-        'http://localhost:5000/api/notes',
+        `${API_URL}/api/notes`,
         { title, content },
         getAuthHeader()
       );
@@ -76,7 +76,7 @@ const Notes = ({ user, onLogout }) => {
 
   const handleDeleteNote = async (noteId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/notes/${noteId}`, getAuthHeader());
+      await axios.delete(`${API_URL}/api/notes/${noteId}`, getAuthHeader());
       
       setNotes(notes.filter((note) => note._id !== noteId));
     } catch (err) {
@@ -87,7 +87,7 @@ const Notes = ({ user, onLogout }) => {
   const handleUpdateNote = async (noteId, updatedData) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/notes/${noteId}`,
+        `${API_URL}/api/notes/${noteId}`,
         updatedData,
         getAuthHeader()
       );
