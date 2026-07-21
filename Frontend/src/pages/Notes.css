@@ -1,0 +1,224 @@
+.notes-container {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes-user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.notes-welcome {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.notes-welcome span {
+  font-weight: 700;
+  color: #f3e5ab;
+}
+
+.btn-logout {
+  background-color: #f3e5ab;
+  color: #4b3c1d;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background-color: #e5d48b;
+}
+
+.notes-card {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+.notes-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2514;
+  margin-bottom: 30px;
+}
+
+.notes-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.notes-form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-input, .notes-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #fff;
+}
+
+.notes-input:focus, .notes-textarea:focus {
+  border-color: #4b3c1d;
+  box-shadow: 0 0 0 2px rgba(75, 60, 29, 0.15);
+}
+
+.notes-textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: inherit;
+}
+
+.notes-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.notes-add-btn {
+  background-color: #b09923;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.notes-add-btn:hover {
+  background-color: #96821c;
+}
+
+.notes-add-btn:active {
+  transform: scale(0.98);
+}
+
+.notes-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.empty-notes {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .notes-container {
+    max-width: 100%;
+  }
+
+  .notes-card {
+    padding: 30px 25px;
+  }
+
+  .notes-title {
+    font-size: 1.7rem;
+    margin-bottom: 24px;
+  }
+
+  .notes-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notes-card {
+    padding: 20px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+
+  .notes-title {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .notes-subtitle {
+    font-size: 1rem;
+  }
+
+  .notes-user-bar {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .notes-welcome {
+    font-size: 0.95rem;
+  }
+
+  .btn-logout {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .notes-input, .notes-textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .notes-textarea {
+    min-height: 70px;
+  }
+
+  .notes-add-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .notes-form-group {
+    margin-bottom: 14px;
+  }
+
+  .notes-list {
+    gap: 12px;
+  }
+
+  .empty-notes {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+}

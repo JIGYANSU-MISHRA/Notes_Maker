@@ -1,0 +1,144 @@
+.register-container {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-card {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.register-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2514;
+  margin-bottom: 30px;
+}
+
+.register-form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #fff;
+}
+
+.register-input:focus {
+  border-color: #4b3c1d;
+  box-shadow: 0 0 0 2px rgba(75, 60, 29, 0.15);
+}
+
+.register-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.register-btn {
+  background-color: #b09923;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.register-btn:hover {
+  background-color: #96821c;
+}
+
+.register-btn:active {
+  transform: scale(0.98);
+}
+
+.register-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+}
+
+.register-switch {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.register-switch a {
+  color: #b09923;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    max-width: 500px;
+  }
+
+  .register-card {
+    padding: 30px 25px;
+  }
+
+  .register-title {
+    font-size: 1.7rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    max-width: 100%;
+  }
+
+  .register-card {
+    padding: 25px 18px;
+    border-radius: 6px;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .register-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .register-form-group {
+    margin-bottom: 14px;
+  }
+}
